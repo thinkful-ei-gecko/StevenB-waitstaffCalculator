@@ -14,19 +14,19 @@
     <form id='meal-details-form'>
       <div>
         <label for="meal-price">Meal Price: $</label>
-        <input type="number" name="meal-price" class="meal-price-entry" placeholder="0.00">
+        <input type="number" name="meal-price" class="meal-price-entry" placeholder="0.00" min='0.00' step='0.01' required>
     </div>
     <div>
         <label for="tax-rate">Tax Rate: %</label>
-        <input type="number" name="tax-rate" class="tax-rate-entry" placeholder="8.25">
+        <input type="number" name="tax-rate" class="tax-rate-entry" placeholder="8.00" min='0.00' step='0.01' value='8.25' required>
     </div>
     <div>
         <label for="tip-percentage">Tip Percentage: %</label>
-        <input type="number" name="tip-percentage" class="tip-percentage-entry" placeholder="15">
+        <input type="number" name="tip-percentage" class="tip-percentage-entry" placeholder="15" min='0.00' step='0.01' required>
     </div>
     <div>
       <button type='submit'>Submit</button>
-      <button type='submit'>Cancel</button>
+      <button type='submit' class='cancel-button'>Cancel</button>
     </div>
     </form>
   </section>
@@ -37,11 +37,14 @@
       <p>Tip $0.00</p>
       <p>Total $0.00</p>
     </div>
-    <div class='right side'>
+    <div class='right-side-earnings'>
       <h2><i>Earnings Info</i></h2>
       <p>Tip Total: $0.00</p>
       <p>Meal Count: 0</p>
       <p>Average Tip per Meal: $0.00</p>
+    </div>
+    <div>
+      <button type='submit' class='reset-button'>Reset</button>
     </div>
   </section>
 
