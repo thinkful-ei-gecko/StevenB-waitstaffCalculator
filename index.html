@@ -14,15 +14,15 @@
     <form id='meal-details-form'>
       <div>
         <label for="meal-price">Meal Price: $</label>
-        <input type="text" name="meal-price" class="meal-price-entry">
+        <input type="number" name="meal-price" class="meal-price-entry" placeholder="0.00">
     </div>
     <div>
         <label for="tax-rate">Tax Rate: %</label>
-        <input type="text" name="tax-rate" class="tax-rate-entry">
+        <input type="number" name="tax-rate" class="tax-rate-entry" placeholder="8.25">
     </div>
     <div>
         <label for="tip-percentage">Tip Percentage: %</label>
-        <input type="text" name="tip-percentage" class="tip-percentage-entry">
+        <input type="number" name="tip-percentage" class="tip-percentage-entry" placeholder="15">
     </div>
     <div>
       <button type='submit'>Submit</button>
@@ -31,7 +31,7 @@
     </form>
   </section>
   <section id='customer-charges right-side'>
-    <div class='right-side'>
+    <div class='right-side-charges'>
       <h2><i>Charges</i></h2>
       <p>Subtotal $0.00</p>
       <p>Tip $0.00</p>
