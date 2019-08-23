@@ -27,7 +27,7 @@ function watchCancelButton() {
   $('.cancel-button').on('click', event => {
     event.preventDefault();
     $('.meal-price-entry').val('');
-    $('.tax-rate-entry').val('');
+    $('.tax-rate-entry').val(8.25);
     $('.tip-percentage-entry').val('');
   });
 }
@@ -39,9 +39,8 @@ function watchForm () {
     const taxRate = $('.tax-rate-entry').val();
     const tipPercentage = $('.tip-percentage-entry').val();
     $('.meal-price-entry').val('');
-    $('.tax-rate-entry').val('');
+    $('.tax-rate-entry').val(8.25);
     $('.tip-percentage-entry').val('');
-    console.log(mealPrice);
     doTheChargesMath(mealPrice, taxRate, tipPercentage);
   });
 }
@@ -59,7 +58,7 @@ function doTheChargesMath (mealPrice, taxRate, tipPercentage) {
 function doTheEarningsMath () {
   store.tipTotal += store.tip;
   store.mealCount++;
-  store.avgTip = (store.tipTotal / store.mealCount)
+  store.avgTip = (store.tipTotal / store.mealCount);
   handleEarningsInfo();
 }
 
